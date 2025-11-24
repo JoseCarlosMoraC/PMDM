@@ -1,19 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="24dp">
+
 
     <TextView
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Buenos Días, Don Javier!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Pulsame"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#D81B60"
+        android:layout_marginBottom="20dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/rgDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbLunes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunes"/>
+
+        <RadioButton
+            android:id="@+id/rbMartes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Martes"/>
+
+        <RadioButton
+            android:id="@+id/rbMiercoles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Miercoles"/>
+
+        <RadioButton
+            android:id="@+id/rbJueves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jueves"/>
+
+        <RadioButton
+            android:id="@+id/rbViernes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viernes"/>
+
+        <RadioButton
+            android:id="@+id/rbSabado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabado"/>
+
+        <RadioButton
+            android:id="@+id/rbDomingo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Domingo"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un día"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000000"/>
+
+</LinearLayout>

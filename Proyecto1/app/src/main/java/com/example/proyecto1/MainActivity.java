@@ -1,28 +1,32 @@
 package com.example.proyecto1;
 
 import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RadioGroup rgDias;
+    private TextView tvResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.prueba1_linearlayout);
+        setContentView(R.layout.activity_actividad2);
 
-        /*
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        rgDias = findViewById(R.id.rgDias);
+        tvResultado = findViewById(R.id.tvResultado);
+
+        // Evento cuando se selecciona un día
+        rgDias.setOnCheckedChangeListener((group, checkedId) -> {
+
+            RadioButton rbSeleccionado = findViewById(checkedId);
+            String dia = rbSeleccionado.getText().toString();
+
+            tvResultado.setText("Has seleccionado: " + dia);
         });
-
-         */
     }
 }
