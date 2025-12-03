@@ -33,15 +33,15 @@ public class LoginActivity extends AppCompatActivity {
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Por ahora solo muestra un mensaje
-                Toast.makeText(LoginActivity.this, "Iniciar sesión - Próximamente", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(LoginActivity.this, SeleccionRolActivity.class);
+                startActivity(intent);
             }
         });
 
         btnCrearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Por ahora solo muestra un mensaje
                 Toast.makeText(LoginActivity.this, "Crear cuenta - Próximamente", Toast.LENGTH_SHORT).show();
             }
         });
@@ -49,7 +49,6 @@ public class LoginActivity extends AppCompatActivity {
         tvOlvidoContrasena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Por ahora solo muestra un mensaje
                 Toast.makeText(LoginActivity.this, "Recuperar contraseña - Próximamente", Toast.LENGTH_SHORT).show();
             }
         });
