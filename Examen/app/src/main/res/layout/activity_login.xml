@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peluquería Mareo"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#673AB7"
+        android:layout_marginBottom="40dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:padding="16dp"
+
+
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="16dp"
+
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/loginPeluqueria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acceder como Peluquería"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/loginCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acceder como Cliente"
+        android:backgroundTint="#E91E63"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"/>
+
+</LinearLayout>

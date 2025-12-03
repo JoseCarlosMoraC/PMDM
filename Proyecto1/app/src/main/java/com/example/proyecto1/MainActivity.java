@@ -1,32 +1,42 @@
 package com.example.proyecto1;
 
 import android.os.Bundle;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RadioGroup rgDias;
-    private TextView tvResultado;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actividad2);
+        setContentView(R.layout.activity_actividad2);  // ← XML grande que generamos
 
-        rgDias = findViewById(R.id.rgDias);
-        tvResultado = findViewById(R.id.tvResultado);
+        // --- EJEMPLOS DE CÓMO ACCEDER A LOS ELEMENTOS DEL LAYOUT ---
 
-        // Evento cuando se selecciona un día
-        rgDias.setOnCheckedChangeListener((group, checkedId) -> {
+        // Header
+        // TextView tvBienvenido = findViewById(R.id.tvBienvenido);
+        // TextView tvNombre = findViewById(R.id.tvNombre);
+        // TextView tvRol = findViewById(R.id.tvRol);
 
-            RadioButton rbSeleccionado = findViewById(checkedId);
-            String dia = rbSeleccionado.getText().toString();
+        // Stats
+        // TextView tvEquipos = findViewById(R.id.tvEquipos);
+        // TextView tvJugadores = findViewById(R.id.tvJugadores);
+        // TextView tvEntrenadores = findViewById(R.id.tvEntrenadores);
+        // TextView tvPartidos = findViewById(R.id.tvPartidos);
 
-            tvResultado.setText("Has seleccionado: " + dia);
-        });
+        // Botones
+        // Button btnCrearEquipo = findViewById(R.id.btnCrearEquipo);
+        // Button btnAñadirJugador = findViewById(R.id.btnAñadirJugador);
+
+        // Actividad reciente
+        // LinearLayout cardEntrenamiento = findViewById(R.id.cardEntrenamiento);
+        // LinearLayout cardPartido = findViewById(R.id.cardPartido);
+
+        // Navbar (si lo agregamos)
+        // LinearLayout btnInicio = findViewById(R.id.btnInicio);
+        // LinearLayout btnEquipos = findViewById(R.id.btnEquipos);
+        // LinearLayout btnStats = findViewById(R.id.btnStats);
+        // LinearLayout btnPerfil = findViewById(R.id.btnPerfil);
+
+        // Aquí puedes añadir la lógica que quieras...
     }
 }
