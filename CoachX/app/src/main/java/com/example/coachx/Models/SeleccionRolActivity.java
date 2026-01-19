@@ -37,7 +37,6 @@ public class SeleccionRolActivity extends AppCompatActivity {
         btnCoordinador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(SeleccionRolActivity.this, CoordinadorDashboardActivity.class);
                 startActivity(intent);
                 finish();
@@ -47,15 +46,24 @@ public class SeleccionRolActivity extends AppCompatActivity {
         btnEntrenador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(SeleccionRolActivity.this, "Dashboard Entrenador - Próximamente", Toast.LENGTH_SHORT).show();
+                android.util.Log.d("SeleccionRol", "Botón Entrenador clickeado");
+                try {
+                    Intent intent = new Intent(SeleccionRolActivity.this, EntrenadorDashboardActivity.class);
+                    android.util.Log.d("SeleccionRol", "Intent creado correctamente");
+                    startActivity(intent);
+                    android.util.Log.d("SeleccionRol", "startActivity ejecutado");
+                    finish();
+                } catch (Exception e) {
+                    android.util.Log.e("SeleccionRol", "ERROR: " + e.getMessage());
+                    e.printStackTrace();
+                    Toast.makeText(SeleccionRolActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
             }
         });
 
         btnDelegado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Toast.makeText(SeleccionRolActivity.this, "Dashboard Delegado - Próximamente", Toast.LENGTH_SHORT).show();
             }
         });
@@ -63,7 +71,6 @@ public class SeleccionRolActivity extends AppCompatActivity {
         tvVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 finish();
             }
         });

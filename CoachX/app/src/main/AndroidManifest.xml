@@ -21,13 +21,16 @@
             </intent-filter>
         </activity>
 
-
         <activity
             android:name=".Models.SeleccionRolActivity"
             android:exported="false" />
 
         <activity
             android:name=".Models.CoordinadorDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Models.EntrenadorDashboardActivity"
             android:exported="false" />
 
     </application>
