@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D3B5C"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona tu rol"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige cómo quieres usar CoachX"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="48dp"/>
+
+        <Button
+            android:id="@+id/btnEntrenador"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            android:text="Entrenador"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5722"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnCoordinador"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            android:text="Coordinador"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5722"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnDelegado"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            android:text="Delegado"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5722"/>
+    </LinearLayout>
+
+</RelativeLayout>
