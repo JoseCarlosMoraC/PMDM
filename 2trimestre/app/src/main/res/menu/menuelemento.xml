@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/info"
+
+    <item
+        android:id="@+id/info"
         android:title="Más info"/>
-    <item android:id="@+id/opciones"
-        android:title="opciones">
+
+    <item
+        android:id="@+id/opciones"
+        android:title="Opciones">
         <menu>
-            <item android:id="@+id/editar"
-                android:title="Editar" />
-            <item android:id="@+id/eliminar"
-                android:title="Eliminar" />
+            <item
+                android:id="@+id/editar"
+                android:title="Editar personaje"/>
+
+            <item
+                android:id="@+id/eliminar"
+                android:title="Eliminar personaje"/>
         </menu>
     </item>
 

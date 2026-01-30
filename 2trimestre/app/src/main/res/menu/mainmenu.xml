@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/home"
-        android:title="Inicio"/>
-    <item android:id="@+id/about"
-        android:title="Sobre Nosotros">
+
+
+
+    <item
+        android:id="@+id/home"
+        android:title="Todos los juegos Yakuza">
         <menu>
-            <item android:id="@+id/empresa"
-                android:title="Empresa" />
-            <item android:id="@+id/emprendimiento"
-                android:title="Emprendimiento" />
+            <item android:id="@+id/y0" android:title="Yakuza 0"/>
+            <item android:id="@+id/y1" android:title="Yakuza Kiwami"/>
+            <item android:id="@+id/y2" android:title="Yakuza Kiwami 2"/>
+            <item android:id="@+id/y3" android:title="Yakuza 3"/>
+            <item android:id="@+id/y4" android:title="Yakuza 4"/>
+            <item android:id="@+id/y5" android:title="Yakuza 5"/>
+            <item android:id="@+id/y6" android:title="Yakuza 6"/>
+            <item android:id="@+id/y7" android:title="Yakuza: Like a Dragon"/>
+            <item android:id="@+id/y8" android:title="Like a Dragon: Infinite Wealth"/>
         </menu>
     </item>
-    <item android:id="@+id/pokemon"
-        android:title="Pokemon">
+
+
+
+
+    <item
+        android:id="@+id/about"
+        android:title="Protagonistas">
         <menu>
-            <item android:id="@+id/listado_pokemon"
-                android:title="Lisado de Pokemon" />
-            <item android:id="@+id/crear_pokemon"
-                android:title="Crear Pokemon" />
+            <item android:id="@+id/kiryu" android:title="Kazuma Kiryu"/>
+            <item android:id="@+id/majima" android:title="Goro Majima"/>
+            <item android:id="@+id/ichiban" android:title="Ichiban Kasuga"/>
+            <item android:id="@+id/saejima" android:title="Taiga Saejima"/>
+            <item android:id="@+id/akiyama" android:title="Shun Akiyama"/>
         </menu>
     </item>
-    <item android:id="@+id/contact"
-        android:title="Contacto"/>
+
+
+
+
+    <item
+        android:id="@+id/contact"
+        android:title="Villanos">
+        <menu>
+            <item android:id="@+id/nishiki" android:title="Akira Nishikiyama"/>
+            <item android:id="@+id/ryuji" android:title="Ryu Ga Gotoku"/>
+            <item android:id="@+id/mine" android:title="Yoshitaka Mine"/>
+            <item android:id="@+id/iwami" android:title="Tsuneo Iwami"/>
+            <item android:id="@+id/aoki" android:title="Ryo Aoki"/>
+        </menu>
+    </item>
+
+
 </menu>

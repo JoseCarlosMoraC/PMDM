@@ -70,6 +70,7 @@
                 android:padding="8dp"
                 android:src="@drawable/ajuste"
                 app:tint="#FFFFFF" />
+
         </LinearLayout>
     </LinearLayout>
 
