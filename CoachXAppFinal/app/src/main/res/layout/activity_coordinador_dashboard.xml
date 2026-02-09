@@ -74,7 +74,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -125,7 +125,7 @@
                                 android:layout_width="18dp"
                                 android:padding="-10dp"
                                 android:layout_height="18dp"
-                                android:src="@drawable/team"
+                                android:src="@drawable/equipo"
                                 app:tint="#FF5722" />
 
                             <TextView
@@ -168,7 +168,7 @@
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@android:drawable/ic_menu_my_calendar"
+                                android:src="@drawable/jugador"
                                 app:tint="#FF5722" />
 
                             <TextView
@@ -219,7 +219,7 @@
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@android:drawable/ic_menu_agenda"
+                                android:src="@drawable/entrenador"
                                 app:tint="#FF5722" />
 
                             <TextView
@@ -261,7 +261,7 @@
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@android:drawable/ic_menu_today"
+                                android:src="@drawable/partidos"
                                 app:tint="#FF5722" />
 
                             <TextView
@@ -412,7 +412,7 @@
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@android:drawable/checkbox_on_background"
+                        android:src="@drawable/entrenamiento"
                         app:tint="#4CAF50" />
                 </LinearLayout>
 
@@ -450,7 +450,7 @@
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@android:drawable/ic_delete"
+                        android:src="@drawable/partidos"
                         app:tint="#FF5722" />
                 </LinearLayout>
             </LinearLayout>
@@ -479,7 +479,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_view"
+                android:src="@drawable/inicio"
                 app:tint="#FF5722" />
 
             <TextView
@@ -502,7 +502,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:src="@drawable/equipo"
                 app:tint="#8B9DAF" />
 
             <TextView
@@ -525,7 +525,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_report_image"
+                android:src="@drawable/stat"
                 app:tint="#8B9DAF" />
 
             <TextView
@@ -548,7 +548,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_myplaces"
+                android:src="@drawable/perfil"
                 app:tint="#8B9DAF" />
 
             <TextView

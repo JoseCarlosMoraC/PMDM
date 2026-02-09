@@ -193,7 +193,7 @@
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@android:drawable/checkbox_on_background"
+                                android:src="@drawable/asistencia"
                                 app:tint="#4CAF50" />
 
                             <TextView
@@ -241,7 +241,7 @@
                             <ImageView
                                 android:layout_width="18dp"
                                 android:layout_height="18dp"
-                                android:src="@android:drawable/ic_menu_report_image"
+                                android:src="@drawable/partidos"
                                 app:tint="#2196F3" />
 
                             <TextView
@@ -265,7 +265,7 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!-- Gestión de Partido Section -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -356,7 +356,7 @@
                     android:textSize="24sp" />
             </LinearLayout>
 
-            <!-- Eventos recientes Section -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -401,7 +401,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@android:drawable/ic_menu_view"
+                    android:src="@drawable/partidos"
                     app:tint="#4CAF50" />
             </LinearLayout>
 
@@ -439,13 +439,13 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@android:drawable/ic_menu_info_details"
+                    android:src="@drawable/amarilla"
                     app:tint="#FFC107" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -468,7 +468,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_view"
+                android:src="@drawable/inicio"
                 app:tint="#FF5722" />
 
             <TextView
@@ -491,7 +491,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_my_calendar"
+                android:src="@drawable/partidos"
                 app:tint="#8B9DAF" />
 
             <TextView
@@ -514,7 +514,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_agenda"
+                android:src="@drawable/acta"
                 app:tint="#8B9DAF" />
 
             <TextView
@@ -537,7 +537,7 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@android:drawable/ic_menu_myplaces"
+                android:src="@drawable/perfil"
                 app:tint="#8B9DAF" />
 
             <TextView

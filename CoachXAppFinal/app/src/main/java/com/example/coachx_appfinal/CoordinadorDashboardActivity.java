@@ -22,7 +22,7 @@ public class CoordinadorDashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinador_dashboard);
 
-        // Inicializar vistas
+
         btnNotifications = findViewById(R.id.btnNotifications);
         btnSettings = findViewById(R.id.btnSettings);
         btnCrearEquipo = findViewById(R.id.btnCrearEquipo);
@@ -32,7 +32,7 @@ public class CoordinadorDashboardActivity extends AppCompatActivity {
         navStats = findViewById(R.id.navStats);
         navPerfil = findViewById(R.id.navPerfil);
 
-        // Configurar listeners
+
         btnNotifications.setOnClickListener(v ->
                 Toast.makeText(this, "Notificaciones", Toast.LENGTH_SHORT).show()
         );
