@@ -36,7 +36,10 @@
         <activity
             android:name=".DelegadoDashboardActivity"
             android:exported="false"/>
-
+        <activity android:name=".LoginActivity" android:exported="false"/>
+        <activity android:name=".EntrenadorCalendarActivity" android:exported="false"/>
+        <activity android:name=".EntrenadorPlantillaActivity" android:exported="false"/>
+        <activity android:name=".EntrenadorStatsActivity" android:exported="false"/>
     </application>
 
 </manifest>

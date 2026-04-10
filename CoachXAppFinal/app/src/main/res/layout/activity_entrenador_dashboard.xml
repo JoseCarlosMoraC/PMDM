@@ -411,7 +411,7 @@
                         android:layout_height="24dp"
                         android:layout_gravity="center_vertical"
                         android:contentDescription="Ver más"
-                        android:src="@drawable/siguiente"
+                        android:src="@drawable/proximoentrenamiento"
                         app:tint="#1A4D6D" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -431,7 +431,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -527,20 +534,43 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@drawable/equipo"
+                android:src="@drawable/calendario"
                 app:tint="#8B9DAF"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Equipos"
+                android:text="Calendario"
                 android:textColor="#8B9DAF"
                 android:textSize="11sp"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/navStats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/team"
+                app:tint="#8B9DAF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Plantilla"
+                android:textColor="#8B9DAF"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navPerfil"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -558,29 +588,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="Stats"
-                android:textColor="#8B9DAF"
-                android:textSize="11sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/perfil"
-                app:tint="#8B9DAF"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Perfil"
                 android:textColor="#8B9DAF"
                 android:textSize="11sp"/>
         </LinearLayout>

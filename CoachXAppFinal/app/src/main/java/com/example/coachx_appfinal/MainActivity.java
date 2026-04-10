@@ -18,13 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
-        btnCrearCuenta = findViewById(R.id.btnCrearCuenta);
-        tvOlvidoContrasena = findViewById(R.id.tvOlvidoContrasena);
-
+        btnIniciarSesion    = findViewById(R.id.btnIniciarSesion);
+        btnCrearCuenta      = findViewById(R.id.btnCrearCuenta);
+        tvOlvidoContrasena  = findViewById(R.id.tvOlvidoContrasena);
 
         btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RoleSelectionActivity.class);
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         });
 

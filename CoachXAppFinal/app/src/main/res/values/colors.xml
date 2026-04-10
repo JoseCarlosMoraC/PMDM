@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- CoachX dark theme palette -->
+    <color name="bg_dark">#0D3B5C</color>
+    <color name="surface_dark">#1A4A6B</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_muted">#8B9DAF</color>
+    <color name="green_primary">#4CAF50</color>
+    <color name="accent_orange">#FF5722</color>
+
+    <!-- Bottom nav tint selectors (static fallbacks) -->
+    <color name="bottom_nav_icon_tint">#8B9DAF</color>
+    <color name="bottom_nav_text_tint">#8B9DAF</color>
 </resources>

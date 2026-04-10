@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <!-- ═══════════════════════════════════════════
+         HEADER
+    ═══════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D3B5C"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <FrameLayout
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/volver"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alineaciones"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Juvenil "
+                android:textColor="#9FB3C8"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/btnNuevaAlineacion"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/team"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════
+         BOTTOM NAV
+    ═══════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#0D3B5C"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:id="@+id/navInicio" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/inicio" app:tint="#9FB3C8" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Inicio" android:textColor="#9FB3C8" android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:id="@+id/navCalendario" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/calendario" app:tint="#9FB3C8" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Calendario" android:textColor="#9FB3C8" android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- ACTIVO -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:id="@+id/navPlantilla" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/team" app:tint="#FFFFFF" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Plantilla" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:id="@+id/navStats" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/stat" app:tint="#9FB3C8" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Stats" android:textColor="#9FB3C8" android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════
+         SCROLL PRINCIPAL
+    ═══════════════════════════════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/bottomNav"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- CARD PARTIDO -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PRÓXIMO PARTIDO" android:textColor="#9FB3C8" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="CDM Gerena vs UD Olivares" android:textColor="#0D3B5C" android:textSize="15sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Sábado, 19 de Abril · 11:00h" android:textColor="#888888" android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/partidos"
+                        app:tint="#FF5722" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CAMPO DE FÚTBOL -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                app:cardBackgroundColor="#2E7D32"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="3dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/bg_field_border"/>
+                    <!-- Línea central -->
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_gravity="center_vertical" android:background="#40FFFFFF" />
+
+                    <!-- Círculo central -->
+                    <View android:layout_width="80dp" android:layout_height="80dp" android:layout_gravity="center" android:background="@drawable/bg_circle_field_line" />
+
+                    <!-- Área grande arriba -->
+                    <View android:layout_width="200dp" android:layout_height="58dp" android:layout_gravity="top|center_horizontal" android:layout_marginTop="0dp" android:background="@drawable/bg_rect_field_line" />
+                    <!-- Área pequeña arriba -->
+                    <View android:layout_width="110dp" android:layout_height="26dp" android:layout_gravity="top|center_horizontal" android:layout_marginTop="10dp" android:background="@drawable/bg_rect_field_line" />
+
+                    <!-- Área grande abajo -->
+                    <View android:layout_width="200dp" android:layout_height="58dp" android:layout_gravity="bottom|center_horizontal" android:layout_marginBottom="0dp" android:background="@drawable/bg_rect_field_line" />
+                    <!-- Área pequeña abajo -->
+                    <View android:layout_width="110dp" android:layout_height="26dp" android:layout_gravity="bottom|center_horizontal" android:layout_marginBottom="10dp" android:background="@drawable/bg_rect_field_line" />
+
+                    <!-- DELANTEROS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="7" android:textColor="#CCFFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Vega" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="9" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Molina" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="11" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Reyes" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- CENTROCAMPISTAS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="8" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Sánchez" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="6" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Jiménez" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="10" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Torres" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- DEFENSAS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="68dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="2" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="García" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="5" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="López" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="4" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Martín" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="3" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Ruiz" android:textColor="#CCFFFFFF" android:textSize="9sp" android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- PORTERO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="14dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/circulorellenonaranja" android:gravity="center" android:text="1" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:gravity="center" android:text="Pérez" android:textColor="#CCFFFFFF" android:textSize="9sp"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Badge 4-3-3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:text="4-3-3"
+                    android:textColor="#0D3B5C"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- CARD SUPLENTES -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="Suplentes" android:textColor="#0D3B5C" android:textSize="13sp" android:textStyle="bold" />
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="15" android:textColor="#CCFFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Iván Ramírez" android:textColor="#1A4D6D" android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/circulorellenonaranja" android:gravity="center" android:text="1" android:textColor="#CCFFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Edwards Figueroa" android:textColor="#1A4D6D" android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                        <TextView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/circulorelleno" android:gravity="center" android:text="19" android:textColor="#CCFFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:text="Mario Becerra" android:textColor="#1A4D6D" android:textSize="14sp"/>
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- BOTÓN GUARDAR -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnGuardarAlineacion"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FF6F00">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Guardar alineación"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

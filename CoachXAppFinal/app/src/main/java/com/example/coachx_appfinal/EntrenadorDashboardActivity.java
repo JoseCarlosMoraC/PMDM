@@ -1,7 +1,9 @@
 package com.example.coachx_appfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
@@ -19,48 +21,62 @@ public class EntrenadorDashboardActivity extends AppCompatActivity {
     private CardView cvAsistencias;
     private Button btnVerEjercicios;
 
+    // Bottom nav: navInicio=Inicio, navEquipos=Calendario, navStats=Plantilla, navPerfil=Stats
+    private LinearLayout navInicio;
+    private LinearLayout navEquipos;
+    private LinearLayout navStats;
+    private LinearLayout navPerfil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrenador_dashboard);
 
-
-        tvUserName = findViewById(R.id.tvUserName);
-        ivNotifications = findViewById(R.id.ivNotifications);
-        ivSettings = findViewById(R.id.ivSettings);
-        cvFichaTactica = findViewById(R.id.cvFichaTactica);
+        tvUserName       = findViewById(R.id.tvUserName);
+        ivNotifications  = findViewById(R.id.ivNotifications);
+        ivSettings       = findViewById(R.id.ivSettings);
+        cvFichaTactica   = findViewById(R.id.cvFichaTactica);
         cvEntrenamientos = findViewById(R.id.cvEntrenamientos);
-        cvAlineaciones = findViewById(R.id.cvAlineaciones);
-        cvAsistencias = findViewById(R.id.cvAsistencias);
+        cvAlineaciones   = findViewById(R.id.cvAlineaciones);
+        cvAsistencias    = findViewById(R.id.cvAsistencias);
         btnVerEjercicios = findViewById(R.id.btnVerEjercicios);
 
+        navInicio  = findViewById(R.id.navInicio);
+        navEquipos = findViewById(R.id.navEquipos);
+        navStats   = findViewById(R.id.navStats);
+        navPerfil  = findViewById(R.id.navPerfil);
 
         ivNotifications.setOnClickListener(v ->
-                Toast.makeText(this, "Notificaciones", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Notificaciones", Toast.LENGTH_SHORT).show());
         ivSettings.setOnClickListener(v ->
-                Toast.makeText(this, "Configuración", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Configuración", Toast.LENGTH_SHORT).show());
         cvFichaTactica.setOnClickListener(v ->
-                Toast.makeText(this, "Ficha Táctica", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Ficha Táctica", Toast.LENGTH_SHORT).show());
         cvEntrenamientos.setOnClickListener(v ->
-                Toast.makeText(this, "Entrenamientos", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Entrenamientos", Toast.LENGTH_SHORT).show());
         cvAlineaciones.setOnClickListener(v ->
-                Toast.makeText(this, "Alineaciones", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Alineaciones", Toast.LENGTH_SHORT).show());
         cvAsistencias.setOnClickListener(v ->
-                Toast.makeText(this, "Asistencias", Toast.LENGTH_SHORT).show()
-        );
-
+                Toast.makeText(this, "Asistencias", Toast.LENGTH_SHORT).show());
         btnVerEjercicios.setOnClickListener(v ->
-                Toast.makeText(this, "Ver ejercicios recomendados", Toast.LENGTH_SHORT).show()
-        );
+                Toast.makeText(this, "Ver ejercicios recomendados", Toast.LENGTH_SHORT).show());
+
+        // Bottom Navigation
+        navInicio.setOnClickListener(v -> { /* ya estamos en inicio */ });
+
+        navEquipos.setOnClickListener(v -> {
+            startActivity(new Intent(this, EntrenadorCalendarActivity.class));
+            finish();
+        });
+
+        navStats.setOnClickListener(v -> {
+            startActivity(new Intent(this, EntrenadorPlantillaActivity.class));
+            finish();
+        });
+
+        navPerfil.setOnClickListener(v -> {
+            startActivity(new Intent(this, EntrenadorStatsActivity.class));
+            finish();
+        });
     }
 }
